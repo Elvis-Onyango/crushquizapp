@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Responses</title>
+</head>
+<body>
+    <h1>Quiz Responses</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Question</th>
+                <th>User Response</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for response in quiz_responses %}
+            <tr>
+                <td>{{ questions[response.question_id] }}</td>
+                <td>{{ response.user_response }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
